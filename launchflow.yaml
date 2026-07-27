@@ -1,0 +1,25 @@
+appId: ca.bellmedia.cravetv
+---
+- launchApp:
+    clearState: true
+- tapOn: "Accept" # Onetrust Accept
+- tapOn: "Next"   # Product intro screen 1
+- tapOn: "Next"
+- assertVisible: "Let’s Go " 
+- scrollUntilVisible:
+    element:
+      point: 4%,86%
+- tapOn: "Let’s Go " # Product intro screen last screen
+- tapOn: "Sign In"   
+- tapOn:
+    text: "Close"
+    index: 1
+- tapOn: "Email Address Email has auto complete"
+- inputText: "bellmqa50@gmail.com"
+- tapOn: "Go"
+- tapOn:
+    text: "Password"
+    index: 1
+- inputText: "Test@123"
+- tapOn: "Continue"
+- tapOn: "Adult(Admin)"
